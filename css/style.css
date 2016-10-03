@@ -154,10 +154,12 @@ h1, h2, h3, h4, h5, h6, strong{
 	-webkit-appearance:none;
 	appearance:none;
 }
-span.error-msg{
+.error{
 	color:#d51b1b;
 	font-size:14px;
 	display:block;
+	margin-top: 10px;
+	padding-left: 10px;
 }
 .btn1{
 	border-radius:5px;
