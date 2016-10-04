@@ -1,119 +1,121 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>::PoolSafe::</title>
-<link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>::PoolSafe::</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type='text/javascript' src='js/jquery-1.11.1.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.min.js'></script>
 </head>
 
 <body>
 <section class="wrappar">
-<header class="header">
-    <div class="container">
-        <div class="logo"><a href=""><img src="images/logo.png" alt="Pool Safe" /></a></div>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><a href=""><img src="images/logo.png" alt="Pool Safe" /></a></div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="banner-caption1"><p>Top Rated Removable Pool Fences.</p></div>
+        <div class="banner-caption2"><p>Schedule Your <strong>Free Safety Consultation!</strong></p></div>
+        <img src="images/banner-img.jpg" alt="banner" />
     </div>
-</header>
-<div class="banner">
-    <div class="banner-caption1"><p>Top Rated Removable Pool Fences.</p></div>
-    <div class="banner-caption2"><p>Schedule Your <strong>Free Safety Consultation!</strong></p></div>
-    <img src="images/banner-img.jpg" alt="banner" />
-</div>
-<div class="c-form">
-    <h2 class="color-blue">Get a Free <br><span>Safety<br> Consultation</span></h2>
-    <p><strong>Please provide us</strong> with the following information and we’ll contact you as soon as possible.</p>
-    <form>
-        <p>
-        <input type="text" name="Name" placeholder="Name" />
-        <span class="error-msg">*Please enter your name</span>
-        </p>
-        <p class="">
-         <select>
-              <option></option>
-              <option></option>
-         </select>
-        </p>
-        <p>
-        <input type="text" name="phone" placeholder="Phone Number" />
-        </p>
-        <p>
-        <input type="text" name="city" placeholder="City" />
-        </p>
-        <p>
-        <input type="email" name="email" placeholder="Email" />
-        <span class="error-msg">*Please enter your name</span>
-        </p>
-        <p><input class="btn1" type="submit" name="submit" value="SCHEDULE YOUR CONSULTATION" /></p>
-    </form>
-</div>
-<div class="why-pool">
-    <div class="container">
-    	<div class="why-pool-left">
-        	<h2 class="color-blue">Why Poolsafe?</h2>
-            <div class="wrap">
-                <div class="why-pool-box">
-                    <img src="images/pool-img1.png" alt="" />
-                    <h4>Quality Service</h4>
+    <div class="c-form">
+        <h2 class="color-blue">Get a Free <br><span>Safety<br> Consultation</span></h2>
+        <p><strong>Please provide us</strong> with the following information and we’ll contact you as soon as possible.</p>
+        <p id="formMessage" hidden></p>
+        <form id="contactForm" method="post" action="email.php">
+            <p>
+                <input type="text" name="name" minlength="2" placeholder="Name"/>
+            </p>
+            <p>
+                <select name="product">
+                    <option value="Nothing Selected">Select Product Type</option>
+                    <option value="fences">Fences</option>
+                    <option value="covers">Covers</option>
+                </select>
+            </p>
+            <p>
+                <input type="text" name="phone" placeholder="Phone Number" />
+            </p>
+            <p>
+                <input type="text" name="city" placeholder="City" />
+            </p>
+            <p>
+                <input type="email" name="email" placeholder="Email"/>
+            </p>
+            <p><input class="btn1" type="submit" name="submit" value="SCHEDULE YOUR CONSULTATION" onclick="formSubmit(this)"/></p>
+        </form>
+    </div>
+    <div class="why-pool">
+        <div class="container">
+            <div class="why-pool-left">
+                <h2 class="color-blue">Why Poolsafe?</h2>
+                <div class="wrap">
+                    <div class="why-pool-box">
+                        <img src="images/pool-img1.png" alt="" />
+                        <h4>Quality Service</h4>
+                    </div>
+                    <div class="why-pool-box">
+                        <img src="images/pool-img2.png" alt="" />
+                        <h4>RELIABLE FENCES</h4>
+                    </div>
+                    <div class="why-pool-box">
+                        <img src="images/pool-img3.png" alt="" />
+                        <h4>X Years EXPERIENCE</h4>
+                    </div>
+                    <div class="clr"></div>
                 </div>
-                <div class="why-pool-box">
-                    <img src="images/pool-img2.png" alt="" />
-                    <h4>RELIABLE FENCES</h4>
-                </div>
-                <div class="why-pool-box">
-                    <img src="images/pool-img3.png" alt="" />
-                    <h4>X Years EXPERIENCE</h4>
-                </div>
-                <div class="clr"></div>
             </div>
-        </div>
-        <div class="why-pool-right">
-            <div class="testi">
-            	<p><img src="images/john-d.png" alt="John D" /> “<strong>Poolsafe</strong> has provided us with a high quality product that makes our <strong>home safer</strong>. Now I feel my children can walk freely the house without me worrying about it.” </p> <p class="testi-name"><strong>John D.</strong></p>
+            <div class="why-pool-right">
+                <div class="testi">
+                    <p><img src="images/john-d.png" alt="John D" /> “<strong>Poolsafe</strong> has provided us with a high quality product that makes our <strong>home safer</strong>. Now I feel my children can walk freely the house without me worrying about it.” </p> <p class="testi-name"><strong>John D.</strong></p>
+                </div>
             </div>
+            <div class="clr"></div>
         </div>
+    </div>
+    <div class="safety"><p>WE OFFER SAFETY AND QUALITY</p></div>
+    <div class="gallery">
+        <div class="gallery-box"><img src="images/gallery-img1.png" alt="" /></div>
+        <div class="gallery-box"><img src="images/gallery-img2.png" alt="" /></div>
+        <div class="gallery-box"><img src="images/gallery-img3.png" alt="" /></div>
+        <div class="gallery-box"><img src="images/gallery-img4.png" alt="" /></div>
         <div class="clr"></div>
     </div>
-</div>
-<div class="safety"><p>WE OFFER SAFETY AND QUALITY</p></div>
-<div class="gallery">
-    <div class="gallery-box"><img src="images/gallery-img1.png" alt="" /></div>
-    <div class="gallery-box"><img src="images/gallery-img2.png" alt="" /></div>
-    <div class="gallery-box"><img src="images/gallery-img3.png" alt="" /></div>
-    <div class="gallery-box"><img src="images/gallery-img4.png" alt="" /></div>
-    <div class="clr"></div>
-</div>
-<div class="services">
-    <div class="container">
-    	<div class="services-box">
-        	<h3>Safety for your Children</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="services">
+        <div class="container">
+            <div class="services-box">
+                <h3>Safety for your Children</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="services-box">
+                <h3>High Quality Fences</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="services-box">
+                <h3>Esthetic and Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="services-box">
+                <h3>Innovation</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="clr"></div>
         </div>
-        <div class="services-box">
-        	<h3>High Quality Fences</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="services-box">
-        	<h3>Esthetic and Design</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="services-box">
-        	<h3>Innovation</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+    </div>
+    <div class="get-quote">
+        <img src="images/get-quote-img.jpg" alt="" />
+        <p><strong>GET A QUOTE & FREE CONSULTATION</strong><br>CALL US AT <strong><a href='#'>(123) 123 45 67</a></strong></p>
+    </div>
+    <div class="cover">
+        <div class="cover-left"><p>Why do you<br>need a pool<br>fence and<br> cover?</p></div>
+        <div class="cover-right"><p>SAFETY AND<br>TRANQUILITY</p></div>
         <div class="clr"></div>
     </div>
-</div>
-<div class="get-quote">
-    <img src="images/get-quote-img.jpg" alt="" />
-    <p><strong>GET A QUOTE & FREE CONSULTATION</strong><br>CALL US AT <strong><a href='#'>(123) 123 45 67</a></strong></p>
-</div>
-<div class="cover">
-    <div class="cover-left"><p>Why do you<br>need a pool<br>fence and<br> cover?</p></div>
-    <div class="cover-right"><p>SAFETY AND<br>TRANQUILITY</p></div>
-    <div class="clr"></div>
-</div>
 </section>
 <footer class="footer">
     <div class="footer-main">
@@ -125,5 +127,48 @@
         <span class="award"><img src="images/award.png" alt="2013 Super service award" /></span>
     </div>
 </footer>
+<script>
+    $("#contactForm").validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "* Please enter your name",
+            email: {
+                required: "* Please enter a valid email",
+                email: "* Not a valid email address"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: 'POST',
+                url: 'email.php',
+                data: $('#contactForm').serialize(),
+                success: function (response) {
+                    if (response == 1) {
+                        $('#formMessage').addClass("success");
+                        $('#formMessage').html("<strong>Thank You!</strong> Your form has been submitted successfully.");
+                        $('#formMessage').fadeIn(1500);
+                    } else {
+                        $('#formMessage').addClass("failure");
+                        $('#formMessage').html("<strong>We're sorry,</strong> there was an issue submitting your form. Please try again later.");
+                        $('#formMessage').fadeIn(1500);
+                    }
+                },
+                error: function(){
+                    $('#formMessage').addClass("failure");
+                    $('#formMessage').html("<strong>We're sorry,</strong> we are unable to submit your form. Please try again later.");
+                    $('#formMessage').fadeIn(10000);
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
