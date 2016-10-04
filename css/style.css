@@ -274,7 +274,7 @@ p#formMessage.failure{
 }
 .services-box{
 	float:left;
-	height: 125px;
+	min-height: 175px;
 	width:47.5%;
 	margin-bottom:60px;
 }
@@ -288,6 +288,7 @@ p#formMessage.failure{
 }
 .services-box p{
 	font-size:16px;
+	line-height: 20px;
 }
 .get-quote{
 	text-align:center;
@@ -395,7 +396,7 @@ p#formMessage.failure{
 	.c-form{width:100%; box-shadow:none; position:relative; right:auto; top:auto;}
 	.c-form h2 br{display:none;}
 	.banner-caption1{width:80%; bottom:110px;}
-	.services-box{height:85px;width:100%;}
+	.services-box{min-height:85px;width:100%;}
 	.cover{background:none;}
 	.cover-left{width:100%; background:#4274B8;}
 	.cover-left br{display:none;}
