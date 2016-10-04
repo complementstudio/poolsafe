@@ -26,6 +26,7 @@
     <div class="c-form">
         <h2 class="color-blue">Get a Free <br><span>Safety<br> Consultation</span></h2>
         <p><strong>Please provide us</strong> with the following information and we’ll contact you as soon as possible.</p>
+        <p id="formMessage" hidden></p>
         <form id="contactForm" method="post" action="email.php">
             <p>
                 <input type="text" name="name" minlength="2" placeholder="Name"/>
@@ -150,15 +151,20 @@
                 url: 'email.php',
                 data: $('#contactForm').serialize(),
                 success: function (response) {
-                    alert(response);
                     if (response == 1) {
-                        alert("success: " + response);
+                        $('#formMessage').addClass("success");
+                        $('#formMessage').html("<strong>Thank You!</strong> Your form has been submitted successfully.");
+                        $('#formMessage').fadeIn(1500);
                     } else {
-                        alert("email fail");
+                        $('#formMessage').addClass("failure");
+                        $('#formMessage').html("<strong>We're sorry,</strong> there was an issue submitting your form. Please try again later.");
+                        $('#formMessage').fadeIn(1500);
                     }
                 },
                 error: function(){
-                    alert("Unable to submit form. Please try again later.");
+                    $('#formMessage').addClass("failure");
+                    $('#formMessage').html("<strong>We're sorry,</strong> we are unable to submit your form. Please try again later.");
+                    $('#formMessage').fadeIn(10000);
                 }
             });
         }

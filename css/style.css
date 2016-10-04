@@ -154,6 +154,19 @@ h1, h2, h3, h4, h5, h6, strong{
 	-webkit-appearance:none;
 	appearance:none;
 }
+p#formMessage{
+	border-radius:.5em;
+	margin: 10px 0px;
+	padding:12px;
+}
+p#formMessage.success{
+	background-color: #DFF2BF;
+	color: #4F8A10;
+}
+p#formMessage.failure{
+	background-color: #FFBABA;
+	color: #D8000C;
+}
 .error{
 	color:#d51b1b;
 	font-size:14px;
