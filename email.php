@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-    $toAddress = "greejose@gmail.com";
+    $toAddress = "info@poolsafe.com";
     $subject = "PoolSafe Landing Page Contact Form";
     $name = stripslashes($_POST['name']);
     $product = stripslashes($_POST['product']);
@@ -15,7 +15,10 @@ if(isset($_POST['submit'])){
         . "Email: " . $email . "<br/>";
     $headers = "From: info@poolsafe.com" . "\r\n" .
         "Content-type: text/html; charset=utf-8" . "\r\n" .
-        "BCC: joe.green@foxsoftware.net";
+        "BCC: tom@poolsafe.com";
+    
+    $customerHeaders = "From: info@poolsafe.com" . "\r\n" .
+        "Content-type: text/html; charset=utf-8";
 
     $customerSubject = "PoolSafe - We have received your request";
     $customerMessage = "We have received your request. Thank you for the opportunity to help you and your"
@@ -29,7 +32,7 @@ if(isset($_POST['submit'])){
     } else {
         echo "0";
     }
-    mail($email, $customerSubject, $customerMessage, $headers);
+    mail($email, $customerSubject, $customerMessage, $customerHeaders);
 }
 
 ?>
