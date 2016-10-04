@@ -4,6 +4,7 @@
 body{
 	font-family: 'HelveticaLight';
 	color:#666666;
+	background-color: #eee;
 }
 img{
 	max-width:100%;
@@ -41,6 +42,7 @@ h1, h2, h3, h4, h5, h6, strong{
   font-style: normal;
 }
 .wrappar{
+	background-color: #ffffff;
 	width:1280px;
 	margin:0 auto;
 	position:relative;

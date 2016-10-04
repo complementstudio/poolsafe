@@ -158,17 +158,17 @@
                     if (response == 1) {
                         $('#formMessage').addClass("success");
                         $('#formMessage').html("<strong>Thank You!</strong> Your form has been submitted successfully.");
-                        $('#formMessage').fadeIn(1500);
+                        $('#formMessage').fadeIn(1000);
                     } else {
                         $('#formMessage').addClass("failure");
                         $('#formMessage').html("<strong>We're sorry,</strong> there was an issue submitting your form. Please try again later.");
-                        $('#formMessage').fadeIn(1500);
+                        $('#formMessage').fadeIn(1000);
                     }
                 },
                 error: function(){
                     $('#formMessage').addClass("failure");
                     $('#formMessage').html("<strong>We're sorry,</strong> we are unable to submit your form. Please try again later.");
-                    $('#formMessage').fadeIn(10000);
+                    $('#formMessage').fadeIn(1000);
                 }
             });
         }
