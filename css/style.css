@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6, strong{
 	width:500px;
 }
 .banner-caption1 p{
-	font-size:60px;
+	font-size:55px;
 	text-transform:uppercase;
 	line-height:55px;
 	color:#fff;
@@ -274,6 +274,7 @@ p#formMessage.failure{
 }
 .services-box{
 	float:left;
+	height: 125px;
 	width:47.5%;
 	margin-bottom:60px;
 }
@@ -394,7 +395,7 @@ p#formMessage.failure{
 	.c-form{width:100%; box-shadow:none; position:relative; right:auto; top:auto;}
 	.c-form h2 br{display:none;}
 	.banner-caption1{width:80%; bottom:110px;}
-	.services-box{width:100%;}
+	.services-box{height:85px;width:100%;}
 	.cover{background:none;}
 	.cover-left{width:100%; background:#4274B8;}
 	.cover-left br{display:none;}
@@ -418,7 +419,7 @@ p#formMessage.failure{
 	.why-pool-box, .why-pool-box:nth-child(1){float:none; margin:0 auto 20px;}
 	.gallery-box{width:50%; margin:0;}
 	.services{padding:30px 0 0;}
-	.services-box{margin-bottom:20px;}
+	.services-box{height:auto;margin-bottom:20px;}
 	.services-box h3{font-size:24px; margin-bottom:8px;}
 	.get-quote p{font-size:20px;}
 	.get-quote{margin-bottom:20px;}
