@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'AvenirLTStdHeavy';
+    src: url('../fonts/AvenirLTStdHeavy/AvenirLTStdHeavy.eot');
+    src: url('../fonts/AvenirLTStdHeavy/AvenirLTStdHeavy.eot') format('embedded-opentype'),
+    url('../fonts/AvenirLTStdHeavy/AvenirLTStdHeavy.woff2') format('woff2'),
+    url('../fonts/AvenirLTStdHeavy/AvenirLTStdHeavy.woff') format('woff'),
+    url('../fonts/AvenirLTStdHeavy/AvenirLTStdHeavy.ttf') format('truetype'),
+    url('../fonts/AvenirLTStdHeavy/AvenirLTStdHeavy.svg#AvenirLTStdHeavy') format('svg');
+}
+@font-face {
+    font-family: 'AvenirLTStdBlack';
+    src: url('../fonts/AvenirLTStdBlack/AvenirLTStdBlack.eot');
+    src: url('../fonts/AvenirLTStdBlack/AvenirLTStdBlack.eot') format('embedded-opentype'),
+    url('../fonts/AvenirLTStdBlack/AvenirLTStdBlack.woff2') format('woff2'),
+    url('../fonts/AvenirLTStdBlack/AvenirLTStdBlack.woff') format('woff'),
+    url('../fonts/AvenirLTStdBlack/AvenirLTStdBlack.ttf') format('truetype'),
+    url('../fonts/AvenirLTStdBlack/AvenirLTStdBlack.svg#AvenirLTStdBlack') format('svg');
+}
+@font-face {
+    font-family: 'HelveticaRegular';
+    src: url('../fonts/HelveticaRegular/HelveticaRegular.eot');
+    src: url('../fonts/HelveticaRegular/HelveticaRegular.eot') format('embedded-opentype'),
+    url('../fonts/HelveticaRegular/HelveticaRegular.woff2') format('woff2'),
+    url('../fonts/HelveticaRegular/HelveticaRegular.woff') format('woff'),
+    url('../fonts/HelveticaRegular/HelveticaRegular.ttf') format('truetype'),
+    url('../fonts/HelveticaRegular/HelveticaRegular.svg#HelveticaRegular') format('svg');
+}
+@font-face {
+    font-family: 'helveticaOblique';
+    src: url('../fonts/helveticaOblique/helveticaOblique.eot');
+    src: url('../fonts/helveticaOblique/helveticaOblique.eot') format('embedded-opentype'),
+    url('../fonts/helveticaOblique/helveticaOblique.woff2') format('woff2'),
+    url('../fonts/helveticaOblique/helveticaOblique.woff') format('woff'),
+    url('../fonts/helveticaOblique/helveticaOblique.ttf') format('truetype'),
+    url('../fonts/helveticaOblique/helveticaOblique.svg#helveticaOblique') format('svg');
+}

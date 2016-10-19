@@ -33,7 +33,7 @@
             </p>
             <p>
                 <select name="product">
-                    <option value="Nothing Selected">Select Product Type</option>
+                    <option value="">Select Product Type</option>
                     <option value="pool covers">Pool Covers</option>
                     <option value="pool fences">Pool Fences</option>
                 </select>
@@ -121,7 +121,7 @@
     <div class="footer-main">
         <p><a href=""><img src="images/footer-logo.png" alt="logo" /></a></p>
         <p>We secure the family swimming pool by installing</br>automatic pool covers and removable pool</br>fences to help protect your precious children.</p>
-        <p><a href="">San Diego</a><a href="">Orange County – Riverside, Los Angeles</a><br><a href="">Bay Area</a><a href="">Salt Lake City Utah</a><a href="">Boise Idaho</a></p>
+        <p class="footer_address"><span class="footer_link">San Diego</span><span class="footer_link">Orange County – Riverside, Los Angeles</span><br><span class="footer_link">Bay Area</span><span class="footer_link">Salt Lake City Utah</span><span class="footer_link">Boise Idaho</span></p>
         <p><span>© 2016 PoolSafe ®. All rights reserved.</span><span><strong>Call us at <a href="tel:1-888-489-2282" class='no_line'>(888) 489-2282</a></strong></span></p>
         <p><a href="http://www.poolsafe.com">Find out about our services and products at PoolSafe.com</a></p>
         <span class="award"><img src="images/award.png" alt="2013 Super service award" /></span>
@@ -136,14 +136,22 @@
             city: {
                 required: true
             },
+            product: {
+                required: true
+            },
             email: {
                 required: true,
                 email: true
+            },
+            phone:{
+                required: true
             }
         },
         messages: {
             name: "* Please enter your name",
             city: "* Please enter a city",
+            phone:"* Please enter your phone number",
+            product:"* Please select product",
             email: {
                 required: "* Please enter a valid email",
                 email: "* Not a valid email address"
@@ -152,7 +160,7 @@
         submitHandler: function(form) {
             $.ajax({
                 type: 'POST',
-                url: 'email.php',
+                url: '/email.php',
                 data: $('#contactForm').serialize(),
                 success: function (response) {
                     if (response == 1) {
