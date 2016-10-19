@@ -155,6 +155,10 @@ h1, h2, h3, h4, h5, h6, strong{
 	-moz-appearance:none;
 	-webkit-appearance:none;
 	appearance:none;
+	background-image: url(../images/br_down.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-position-x: 95%;
 }
 p#formMessage{
 	border-radius:.5em;
@@ -290,7 +294,7 @@ p#formMessage.failure{
 }
 .services-box p{
 	font-size:16px;
-	line-height: 20px;
+	line-height: 25px;
 }
 .get-quote{
 	text-align:center;

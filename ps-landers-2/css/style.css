@@ -160,6 +160,7 @@ h1, h2, h3, h4, h5, h6, strong{
 	-moz-appearance:none;
 	-webkit-appearance:none;
 	appearance:none;
+
 }
 p#formMessage{
 	border-radius:.5em;
@@ -301,6 +302,7 @@ p#formMessage.failure{
 	font-family: 'AvenirLTStdBlack';
 }
 .services-box p{
+	line-height: 25px;
 	font-size:16px;
 	font-family: 'HelveticaRegular';
 
@@ -510,6 +512,10 @@ p#formMessage.failure{
 	appearance: none;
 	font-size: 18px;
 	color: #666666;
+	background-image: url(../images/br_down.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-position-x: 95%;
 }
 .landing_form .single_filed select option {
 	background-color: rgb(243, 243, 243);
