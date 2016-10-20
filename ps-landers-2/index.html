@@ -239,13 +239,14 @@
         submitHandler: function(form) {
             $.ajax({
                 type: 'POST',
-                url: '/email.php',
+                url: '../email.php',
                 data: $('#contactForm').serialize(),
                 success: function (response) {
                     if (response == 1) {
-                        $('#formMessage').addClass("success");
-                        $('#formMessage').html("<strong>Thank You!</strong> Your form has been submitted successfully.");
-                        $('#formMessage').fadeIn(1000);
+                        window.location.href = "http://www.poolsafe.com/landers-success.html";
+                        //$('#formMessage').addClass("success");
+                        //$('#formMessage').html("<strong>Thank You!</strong> Your form has been submitted successfully.");
+                        //$('#formMessage').fadeIn(1000);
                     } else {
                         $('#formMessage').addClass("failure");
                         $('#formMessage').html("<strong>We're sorry,</strong> there was an issue submitting your form. Please try again later.");
