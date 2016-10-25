@@ -10,6 +10,7 @@
     <link href="css/font.css" rel="stylesheet">
     <script type='text/javascript' src='js/jquery-1.11.1.js'></script>
     <script type='text/javascript' src='js/jquery.validate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.maskedinput-1.4.1.min.js'></script>
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                             <!--<input type="text" placeholder="Name" name="phone"  minlength="2">-->
                         </p>
                         <p>
-                            <input type="text" placeholder="Phone Number" name="phone" >
+                            <input type="text" placeholder="Phone Number" name="phone" id="phone" >
                         </p>
 
                     </div>
@@ -277,6 +278,22 @@
         $('#triangle-right').css('right',-(corner_height/2));
     });
 
+    //Phone number mask
+    $("#phone").mask("(999) 999-999?9");
+
+    $("#phone").on("blur", function() {
+        var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
+
+        if( last.length == 5 ) {
+            var move = $(this).val().substr( $(this).val().indexOf("-") + 1, 1 );
+
+            var lastfour = last.substr(1,4);
+
+            var first = $(this).val().substr( 0, 9 );
+
+            $(this).val( first + move + '-' + lastfour );
+        }
+    });
 </script>
 </body>
 </html>

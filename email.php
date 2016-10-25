@@ -15,16 +15,19 @@ if(isset($_POST['submit'])){
         . "Email: " . $email . "<br/>";
     $headers = "From: info@poolsafe.com" . "\r\n" .
         "Content-type: text/html; charset=utf-8" . "\r\n" .
-        "BCC: tom@poolsafe.com";
-    
+        "BCC: tom@poolsafe.com,matt@complementstudio.com,joe@complementstudio.com";
+
     $customerHeaders = "From: info@poolsafe.com" . "\r\n" .
         "Content-type: text/html; charset=utf-8";
 
     $customerSubject = "PoolSafe - We have received your request";
-    $customerMessage = "We have received your request. Thank you for the opportunity to help you and your"
-    . " family with swimming pool safety. We will be in contact within 24-48 hours so that we can schedule"
-    . " an on-site Safety Consultation. In the mean time, you may find more interesting details about our pool"
-    . " fence by visiting <a href='http://poolsafe.com/removable-pool-fences/'>Poolsafe.com/poolfences</a>";
+    $customerMessage = "Thank you for contacting Poolsafe to help with your swimming pool safety needs!<br /><br />"
+                        ."If you provided a phone number, a Safety Consultant from our company will contact you within 24 hours (or on Monday,"
+                        ." if you submitted your request during the weekend). If you did not provide a contact number, you may respond to this"
+                        ." email and we will attach it to your request so that we can expedite the process.<br /><br />"
+                        ."For more information about our pool fences while you wait for a call from our Safety Consultant, you may visit our"
+                        ." website at <a href='http://poolsafe.com/removable-pool-fences/'>Poolsafe.com/poolfences</a>. You may also view our gallery to see a limited representation of our work.<br /><br />"
+                        ."We share your feeling that swimming pool safety is important so we look forward to working with you in the coming days!";
 
     //send form data email
     if (mail($toAddress, $subject, $message, $headers)) {
