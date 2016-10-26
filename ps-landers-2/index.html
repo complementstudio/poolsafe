@@ -31,36 +31,68 @@
             <div class="landing_form">
                 <p id="formMessage" hidden></p>
                 <form id="contactForm" method="post" action="email.php">
-                    <div class="single_filed">
-                        <!--<input type="text" >-->
+                    <div class="input_fields">
+                        <p>
+                            <input type="text" name="name" minlength="2" placeholder="Name"/>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Phone Number" name="phone" id="phone">
+                        </p>
+
+                    </div>
+                    <div class="input_fields">
+                        <p>
+                            <input type="email" placeholder="E-mail" name="email" >
+                        </p>
+                        <p>
+                            <input type="text" placeholder="City" name="city" >
+                        </p>
+
+                    </div>
+                    <div class="input_fields">
                         <p>
                             <select name="product">
-                                <option  value="">Select Product Type</option>
-                                <option value="pool covers">Pool Covers</option>
-                                <option value="pool fences">Pool Fences</option>
+                                <option value="">Select Product Interest</option>
+                                <option value="Automatic Pool Cover">Automatic Pool Cover</option>
+                                <option value="Removable Pool Fence">Removable Pool Fence</option>
+                            </select>
+                        </p>
+                        <p>
+                            <select name="mainInterest">
+                                <option value="">Select General Interest</option>
+                                <option value="Safety">Safety</option>
+                                <option value="Convenience">Convenience</option>
+                                <option value="Heat generation or retention">Heat Generation/Retention</option>
+                                <option value="Cleanliness">Cleanliness</option>
+                                <option value="Evaporation">Evaporation</option>
+                                <option value="Other">Other</option>
                             </select>
                         </p>
 
                     </div>
-
                     <div class="input_fields">
                         <p>
-                            <input type="text" name="name" minlength="2" placeholder="Name"/>
-                            <!--<input type="text" placeholder="Name" name="phone"  minlength="2">-->
+                            <select name="construction">
+                                <option value="">Select Pool Status</option>
+                                <option value="Under construction">Under construction</option>
+                                <option value="Already built">Already built</option>
+                            </select>
                         </p>
                         <p>
-                            <input type="text" placeholder="Phone Number" name="phone" id="phone" >
+                            <select name="projectTimeframe">
+                                <option value="">Select Project Timeframe</option>
+                                <option value="Immediate need">Immediate need</option>
+                                <option value="Within 1 month">Within 1 month</option>
+                                <option value="1-3 months">1-3 months</option>
+                                <option value="3+ months">3+ months</option>
+                            </select>
                         </p>
 
                     </div>
-                    <div class="input_fields">
+                    <div class="single_filed">
                         <p>
-                            <input type="text" placeholder="City" name="city" >
+                            <textarea name="comments" placeholder="Comments..." ></textarea>
                         </p>
-                        <p>
-                            <input type="email" placeholder="E-mail" name="email" >
-                        </p>
-
                     </div>
                     <div class="full-width-left">
                         <input type="submit" class="form_consult_button" value="SCHEDULE YOUR CONSULTATION" name="submit">
@@ -72,38 +104,6 @@
         </div>
     </div>
 
-    <!--<div class="banner">-->
-        <!--<div class="banner-caption1"><p>Top Rated Removable Pool Fences</p></div>-->
-        <!--<div class="banner-caption2"><p>Schedule Your <strong>Free Safety Consultation!</strong></p></div>-->
-        <!--<img src="images/banner-img.jpg" alt="banner" />-->
-    <!--</div>-->
-    <!--<div class="c-form">-->
-        <!--<h2 class="color-blue">Get a Free <br><span>Safety<br> Consultation</span></h2>-->
-        <!--<p><strong>Please provide us</strong> with the following information and we’ll contact you as soon as possible.</p>-->
-        <!--<p id="formMessage" hidden></p>-->
-        <!--<form id="contactForm" method="post" action="email.php">-->
-            <!--<p>-->
-                <!--<input type="text" name="name" minlength="2" placeholder="Name"/>-->
-            <!--</p>-->
-            <!--<p>-->
-                <!--<select name="product">-->
-                    <!--<option value="Nothing Selected">Select Product Type</option>-->
-                    <!--<option value="pool covers">Pool Covers</option>-->
-                    <!--<option value="pool fences">Pool Fences</option>-->
-                <!--</select>-->
-            <!--</p>-->
-            <!--<p>-->
-                <!--<input type="text" name="phone" placeholder="Phone Number" />-->
-            <!--</p>-->
-            <!--<p>-->
-                <!--<input type="text" name="city" placeholder="City" />-->
-            <!--</p>-->
-            <!--<p>-->
-                <!--<input type="email" name="email" placeholder="Email"/>-->
-            <!--</p>-->
-            <!--<p><input class="btn1" type="submit" name="submit" value="SCHEDULE YOUR CONSULTATION" onclick="formSubmit(this)"/></p>-->
-        <!--</form>-->
-    <!--</div>-->
     <div class="why_pool full-width-left">
         <div class="why_pool_content">
             <div class="full-width-left">
@@ -179,11 +179,6 @@
         <img src="images/get-quote-img2.jpg" alt="" />
         <p>GET A QUOTE & FREE CONSULTATION<br>CALL US AT <a href='tel:1-888-489-2282'>(888) 489-2282</a></p>
     </div>
-    <!--<div class="cover full-width-left">-->
-        <!--<div class="cover-left"><p>Why do you<br>need a pool<br>fence and<br> cover?</p></div>-->
-        <!--<div class="cover-right"><p>SAFETY AND<br>PEACE OF MIND</p></div>-->
-        <!--<div class="clr"></div>-->
-    <!--</div>-->
     <div class="why_cover full-width-left">
         <div class="left_content">
             <div class="left_content_item">
@@ -225,17 +220,29 @@
             },
             product:{
                 required: true
+            },
+            mainInterest:{
+                required: true
+            },
+            construction:{
+                required: true
+            },
+            projectTimeframe:{
+                required: true
             }
         },
         messages: {
             name: "* Please enter your name",
             city: "* Please enter a city",
             phone:"* Please enter your phone number",
-            product:"* Please select product",
+            product:"* Please select a product",
             email: {
                 required: "* Please enter a valid email",
                 email: "* Not a valid email address"
-            }
+            },
+            mainInterest: "* Please select your main interest",
+            construction: "* Please select your construction status",
+            projectTimeframe: "* Please select your project timeframe"
         },
         submitHandler: function(form) {
             $.ajax({

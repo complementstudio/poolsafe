@@ -160,6 +160,27 @@ h1, h2, h3, h4, h5, h6, strong{
 	background-position: right;
 	background-position-x: 95%;
 }
+
+.c-form textarea{
+	height: 150px;
+	line-height: 30px;
+	background-color: rgb(243, 243, 243);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid rgb(66, 116, 184);
+	padding: 0 10px;
+	width: 100%;
+	margin: 0 auto 20px;
+	vertical-align:top;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 18px;
+	color: #666666;
+	overflow-y: scroll;
+}
+
 p#formMessage{
 	border-radius:.5em;
 	margin: 10px 0px;
@@ -208,9 +229,7 @@ p#formMessage.failure{
 	float:left;
 }
 .why-pool-right{
-	width:440px;
-	float:right;
-	padding-top:180px;
+	padding-top:30px;
 }
 .why-pool-box{
 	float:left;
@@ -240,9 +259,11 @@ p#formMessage.failure{
 	padding:6px 0 0;
 }
 .testi{
+	display: inline-block;
 }
 .testi img{
 	float:left;
+	padding-bottom: 65px;
 	margin:0 15px 10px 0;
 }
 .testi-name{
