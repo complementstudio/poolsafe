@@ -2,17 +2,26 @@
 
 if(isset($_POST['submit'])){
     $toAddress = "info@poolsafe.com";
-    $subject = "PoolSafe Landing Page Contact Form";
+    $subject = "PoolSafe Fencing Lead";
     $name = stripslashes($_POST['name']);
     $product = stripslashes($_POST['product']);
     $phone = stripslashes($_POST['phone']);
     $city = stripslashes($_POST['city']);
     $email = stripslashes($_POST['email']);
-    $message = "Customer Information:<br/><br/>" . "Name: " . $name . "<br/>"
-        . "Product: " . $product . "<br/>"
-        . "Phone: " . $phone . "<br/>"
-        . "City: " . $city . "<br/>"
-        . "Email: " . $email . "<br/>";
+    $mainInterest = stripslashes($_POST['mainInterest']);
+    $construction = stripslashes($_POST['construction']);
+    $projectTimeframe = stripslashes($_POST['projectTimeframe']);
+    $comments = stripslashes($_POST['comments']);
+    $message = "Customer Information:<br/><br/>"
+        . "<b>Name:</b> " . $name . "<br/>"
+        . "<b>Email:</b> " . $email . "<br/>"
+        . "<b>Phone:</b> " . $phone . "<br/>"
+        . "<b>City:</b> " . $city . "<br/>"
+        . "<b>Product:</b> " . $product . "<br/>"
+        . "<b>Main Interest:</b> " . $mainInterest . "<br/>"
+        . "<b>Construction Status:</b> " . $construction . "<br/>"
+        . "<b>Project Timeframe:</b> " . $projectTimeframe . "<br/>"
+        . "<b>Comments:</b> " . $comments . "<br/>";
     $headers = "From: info@poolsafe.com" . "\r\n" .
         "Content-type: text/html; charset=utf-8" . "\r\n" .
         "BCC: tom@poolsafe.com,matt@complementstudio.com,joe@complementstudio.com";

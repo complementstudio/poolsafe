@@ -33,11 +33,7 @@
                 <input type="text" name="name" minlength="2" placeholder="Name"/>
             </p>
             <p>
-                <select name="product">
-                    <option value="">Select Product Type</option>
-                    <option value="pool covers">Pool Covers</option>
-                    <option value="pool fences">Pool Fences</option>
-                </select>
+                <input type="email" name="email" placeholder="Email"/>
             </p>
             <p>
                 <input type="text" name="phone" id="phone" placeholder="Phone Number" />
@@ -46,7 +42,41 @@
                 <input type="text" name="city" placeholder="City" />
             </p>
             <p>
-                <input type="email" name="email" placeholder="Email"/>
+                <select name="product">
+                    <option value="">Select Product Interest</option>
+                    <option value="Automatic Pool Cover">Automatic Pool Cover</option>
+                    <option value="Removable Pool Fence">Removable Pool Fence</option>
+                </select>
+            </p>
+            <p>
+                <select name="mainInterest">
+                    <option value="">Select General Interest</option>
+                    <option value="Safety">Safety</option>
+                    <option value="Convenience">Convenience</option>
+                    <option value="Heat generation or retention">Heat Generation/Retention</option>
+                    <option value="Cleanliness">Cleanliness</option>
+                    <option value="Evaporation">Evaporation</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+            <p>
+                <select name="construction">
+                    <option value="">Select Pool Status</option>
+                    <option value="Under construction">Under construction</option>
+                    <option value="Already built">Already built</option>
+                </select>
+            </p>
+            <p>
+                <select name="projectTimeframe">
+                    <option value="">Select Project Timeframe</option>
+                    <option value="Immediate need">Immediate need</option>
+                    <option value="Within 1 month">Within 1 month</option>
+                    <option value="1-3 months">1-3 months</option>
+                    <option value="3+ months">3+ months</option>
+                </select>
+            </p>
+            <p>
+                <textarea name="comments" placeholder="Comments..." ></textarea>
             </p>
             <p><input class="btn1" type="submit" name="submit" value="SCHEDULE YOUR CONSULTATION" onclick="formSubmit(this)"/></p>
         </form>
@@ -70,10 +100,11 @@
                     </div>
                     <div class="clr"></div>
                 </div>
-            </div>
-            <div class="why-pool-right">
-                <div class="testi">
-                    <p>“I have been working with <strong>Poolsafe</strong> for many years now and have always received professional and courteous service. This company really takes pride in the work they do. It is great working with a company that I can <strong>refer with confidence</strong> knowing they will take care of customers and stand behind their work.”</p> <p class="testi-name"><strong>- Javier Payan</br>San Diego IPSSA Regional Past President</strong></p>
+                <div class="why-pool-right">
+                    <div class="testi">
+                        <img src="images/pool_logo.png" alt="image">
+                        <p>“I have been working with <strong>Poolsafe</strong> for many years now and have always received professional and courteous service. This company really takes pride in the work they do. It is great working with a company that I can <strong>refer with confidence</strong> knowing they will take care of customers and stand behind their work.”</p> <p class="testi-name"><strong>- Javier Payan</br>San Diego IPSSA Regional Past President</strong></p>
+                    </div>
                 </div>
             </div>
             <div class="clr"></div>
@@ -146,6 +177,15 @@
             },
             phone:{
                 required: true
+            },
+            mainInterest:{
+                required: true
+            },
+            construction:{
+                required: true
+            },
+            projectTimeframe:{
+                required: true
             }
         },
         messages: {
@@ -156,7 +196,10 @@
             email: {
                 required: "* Please enter a valid email",
                 email: "* Not a valid email address"
-            }
+            },
+            mainInterest: "* Please select your main interest",
+            construction: "* Please select your construction status",
+            projectTimeframe: "* Please select your project timeframe"
         },
         submitHandler: function(form) {
             $.ajax({

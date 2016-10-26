@@ -179,7 +179,7 @@ p#formMessage.failure{
 	color:#d51b1b;
 	font-size:14px;
 	display:block;
-	margin-top: 10px;
+	margin-bottom: 10px;
 	padding-left: 10px;
 }
 .btn1{
@@ -456,7 +456,7 @@ p#formMessage.failure{
 }
 .landing_form_content .landing_form{
 	max-width: 810px;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 .landing_form .input_fields{
 	width: 50%;
@@ -490,12 +490,7 @@ p#formMessage.failure{
 .landing_form .input_fields input:-ms-input-placeholder { /* Internet Explorer 10-11 */
 	font-size: 18px;
 }
-.landing_form .single_filed{
-	width: 100%;
-	float: left;
-	margin-top: 35px;
-}
-.landing_form .single_filed select{
+.landing_form .input_fields select{
 	height: 50px;
 	line-height: 50px;
 	background-color: rgb(243, 243, 243);
@@ -504,7 +499,7 @@ p#formMessage.failure{
 	border-radius: 5px;
 	border: 1px solid rgb(66, 116, 184);
 	padding: 0 20px;
-	width: 59%;
+	width: 100%;
 	margin: 0 auto 20px;
 	display: table;
 	-webkit-appearance: none;
@@ -522,6 +517,29 @@ p#formMessage.failure{
 	font-size: 18px;
 	color: #666666;
 
+}
+.landing_form .single_filed{
+	width: 100%;
+	float: left;
+}
+.landing_form textarea{
+	height: 150px;
+	line-height: 30px;
+	background-color: rgb(243, 243, 243);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid rgb(66, 116, 184);
+	padding: 0 20px;
+	width: 80%;
+	margin: 0 auto 20px;
+	vertical-align:top;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 18px;
+	color: #666666;
+	overflow-y: scroll;
 }
 .landing_form  .form_consult_button{
 	display: table;
@@ -801,7 +819,7 @@ p#formMessage.failure{
 	}
 }
 @media all and (max-width:600px){
-	.landing_form .input_fields,.landing_form .single_filed select{
+	.landing_form .input_fields,.landing_form .single_filed textarea{
 		width: 100%;
 	}
 	.landing_form .single_filed{
